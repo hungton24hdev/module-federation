@@ -1,9 +1,5 @@
-import React from "react";
-import logo from "./logo.svg";
 import Header from "remoteApp/Header";
-import "./App.css";
-// const RemoteComponent = React.lazy(() => import("remoteApp/Header"));
-console.log(Header);
+import "./App.scss";
 
 function App() {
   return (
