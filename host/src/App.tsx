@@ -1,13 +1,19 @@
-import Header from "remoteApp/Header";
+import React, { useEffect } from "react";
+import { inject, unmount } from "remoteApp/appInjector";
+import routes from "remoteApp/router";
 import "./App.scss";
+const parentElementId = "parent";
+console.log(routes);
 
 function App() {
+  useEffect(() => {
+    inject(parentElementId);
+    return () => unmount(parentElementId);
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <Header />
-        content edit
-      </header>
+      <header>Shell app version({React.version})</header>
+      <div id={parentElementId}></div>
     </div>
   );
 }

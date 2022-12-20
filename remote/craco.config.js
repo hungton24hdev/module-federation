@@ -21,18 +21,11 @@ module.exports = {
         filename: "remoteEntry.js",
         remotes: {},
         exposes: {
-          "./Header": "./src/Components/Header",
+          "./router": "./src/router",
+          "./appInjector": "./src/appInjector",
         },
         shared: {
           ...deps,
-          react: {
-            singleton: true,
-            requiredVersion: deps.react,
-          },
-          "react-dom": {
-            singleton: true,
-            requiredVersion: deps["react-dom"],
-          },
         },
       }),
     ],

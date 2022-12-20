@@ -20,14 +20,6 @@ module.exports = {
         exposes: {},
         shared: {
           ...deps,
-          react: {
-            singleton: true,
-            requiredVersion: deps.react,
-          },
-          "react-dom": {
-            singleton: true,
-            requiredVersion: deps["react-dom"],
-          },
         },
       }),
     ],
